@@ -28,13 +28,7 @@ const SignIn = () => {
       
       // validation against user database here
       
-      Alert.alert(
-        'Success', 
-        'Login successful! Welcome to UNIMUS.',
-        [
-          { text: 'OK', onPress: () => router.replace('/') }
-        ]
-      );
+      router.replace('/successful')
     } catch (error: any) {
       Alert.alert('Error', error.message || 'Login failed. Please check your credentials and try again.');
     } finally {
@@ -77,9 +71,9 @@ const SignIn = () => {
       </View>
 
       <View className="flex justify-center flex-row gap-2 mt-6">
-        <Text className="text-gray-100">Don't have an account?</Text>
+        <Text className="text-gray-100">Belum punya akun?</Text>
         <Link href="/sign-up" className="base-bold text-primary">
-          Sign Up
+          Daftar
         </Link>
       </View>
     </View>

@@ -34,7 +34,7 @@ const SignUp = () => {
 
     try {
       // sign up logic here 
-      
+
       console.log('Sign up data:', form);
       
       Alert.alert(
@@ -101,9 +101,9 @@ const SignUp = () => {
       </View>
 
       <View className="flex justify-center flex-row gap-2 mt-6 mb-8">
-        <Text className="text-gray-100">Already have an account?</Text>
+        <Text className="text-gray-100">Sudah punya akun?</Text>
         <Link href="/sign-in" className="base-bold text-primary">
-          Sign In
+          Masuk
         </Link>
       </View>
     </View>
