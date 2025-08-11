@@ -1,4 +1,4 @@
-interface CustomButtonProps {
+export interface CustomButtonProps {
     onPress?: () => void;
     title?: string;
     style?: string;
@@ -7,11 +7,23 @@ interface CustomButtonProps {
     isLoading?: boolean;
 }
 
-interface CustomInputProps {
+export interface CustomInputProps {
     placeholder?: string;
     value?: string;
     onChangeText?: (text: string) => void;
     label: string;
     secureTextEntry?: boolean;
-    keyboardType?: "default" | "email-address" | "numeric" | "phone-pad";
+    keyboardType?: "default" | "email-address";
+}
+
+export interface SignUpForm {
+    name: string;
+    email: string;
+    nim: string;
+    password: string;
+}
+
+export interface SignInForm {
+    nim: string;
+    password: string;
 }

@@ -18,15 +18,17 @@ export default function AuthLayout() {
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={{ flex: 1 }}
     >
       <ScrollView
         className={"bg-bgColor h-full"}
         keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}
       >
         <View className={"w-full relative items-center"} style={styles.imageContainer}>
           <ImageBackground
             source={images.loginGraphic}
-            className={"size-full rounded-b-xl "}
+            className={"size-full rounded-b-lg "}
             resizeMode="contain"
           >
             {/* Logos */}
@@ -44,11 +46,12 @@ export default function AuthLayout() {
             style={styles.title}
             className={"self-center absolute top-40 left-5"}
           >
-            Sistem Informasi Akademik unimus
+            Sistem Informasi Akademik UNIMUS
           </Text>
         </View>
         <Slot />
       </ScrollView>
+      
     </KeyboardAvoidingView>
   );
 }
@@ -60,7 +63,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontFamily: FONTS.PoppinsBold,
-    color: "#fff",
+    color: "#ffff",
     textShadowColor: "rgba(0, 0, 0, 0.7)",
     textShadowOffset: { width: 2, height: 1 },
     textShadowRadius: 5,

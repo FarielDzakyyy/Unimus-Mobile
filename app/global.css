@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .label {
+    @apply text-base font-medium text-gray-700 mb-2;
+  }
+  
+  .input {
+    @apply w-full px-4 py-3 border-2 rounded-lg text-base bg-white focus:outline-none;
+  }
+  
+  .custom-btn {
+    @apply bg-primary py-4 px-6 rounded-lg justify-center items-center w-full;
+  }
+  
+  .paragraph-semibold {
+    @apply text-base font-semibold;
+  }
+  
+  .base-bold {
+    @apply text-base font-bold;
+  }
+  
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+}

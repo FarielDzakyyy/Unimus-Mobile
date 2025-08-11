@@ -1,15 +1,8 @@
+import { CustomInputProps } from '@/type';
 import cn from 'clsx';
 import React, { useState } from 'react';
 import { Text, TextInput, View } from 'react-native';
 
-interface CustomInputProps {
-    placeholder?: string;
-    value?: string;
-    onChangeText?: (text: string) => void;
-    label: string;
-    secureTextEntry?: boolean;
-    keyboardType?: "default" | "email-address" | "numeric" | "phone-pad";
-}
 
 const CustomInput = ({
     placeholder = "Enter text",
@@ -37,7 +30,7 @@ const CustomInput = ({
             onBlur={() => setIsFocused(false)}
             placeholder={placeholder}
             placeholderTextColor='#888'
-            className={cn('input', isFocused ? 'border-primary' : 'border-gray-100')}
+            className={cn('input', isFocused ? 'border-gray-200' : 'border-primary', "text-primary") }
         />
     </View>
   )
