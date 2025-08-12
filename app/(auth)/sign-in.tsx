@@ -39,9 +39,9 @@ const SignIn = () => {
   return (
     <View className="gap-6 bg-bgColor rounded-xl p-6">
       <View className="gap-4">
-        <Text className="text-2xl font-bold text-center text-dark-100 mb-2">
+        {/* <Text className="text-2xl font-bold text-center text-dark-100 mb-2">
           Welcome Back
-        </Text>
+        </Text> */}
         <Text className="text-gray-100 text-center mb-4">
           Sign in with your student credentials
         </Text>

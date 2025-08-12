@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         primary: "#0088FF",
         secondary: "#00B75B",
+        tertiary: "#EFF0F6",
         white: {
           DEFAULT:  "#ffffff",
             100: "#fafafa",
@@ -24,6 +25,7 @@ module.exports = {
         },
         error: "#F14141",
         success: "#2F9B65",
+        lightPrimary: "#78C0FF",
 
       },
     },

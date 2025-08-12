@@ -54,9 +54,9 @@ const SignUp = () => {
   return (
     <View className="gap-6 bg-bgColor rounded-xl p-6">
       <View className="gap-4">
-        <Text className="text-2xl font-bold text-center text-dark-100 mb-2">
+        {/* <Text className="text-2xl font-bold text-center text-dark-100 mb-2">
           Create Account
-        </Text>
+        </Text> */}
         <Text className="text-gray-100 text-center mb-4">
           Enter your details to register as a student
         </Text>

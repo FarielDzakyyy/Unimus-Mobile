@@ -7,8 +7,8 @@ export default function Index() {
       <Text className="text-xl font-bold text-blue-500">
         This will be the Home Page!!
       </Text>
-      <Link href="/sign-up">
-        Sign up
+      <Link href="/sign-in">
+        Sign in
       </Link>
     </View>
   );
