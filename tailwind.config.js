@@ -19,6 +19,7 @@ module.exports = {
         },
         bgColor: {
             DEFAULT: "#F3FDFF",
+            BLUE: "#2B3A7C"
         },
         dark: {
           100: "#181c2e",

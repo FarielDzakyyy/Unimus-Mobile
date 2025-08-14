@@ -27,3 +27,9 @@ export interface SignInForm {
     nim: string;
     password: string;
 }
+
+export interface TabBarIconProps {
+    focused: boolean;
+    icon: ImageSourcePropType;
+    title: string;
+}

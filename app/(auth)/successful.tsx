@@ -25,7 +25,7 @@ const Successful = () => {
 
         <CustomButton
           title="Go to Homepage"
-          onPress={() => router.navigate("/")}
+          onPress={() => router.navigate('/')}
           style="mt-8 rounded-full"
         />
       </View>

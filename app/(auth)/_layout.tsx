@@ -1,7 +1,7 @@
 import { images } from "@/constants";
 import { FONTS } from "@/constants/Font";
 import cn from "clsx";
-import { Slot, useRouter, useSegments } from "expo-router";
+import { Redirect, Slot, useRouter, useSegments } from "expo-router";
 import React, { useEffect, useState } from "react";
 import {
   Dimensions,
@@ -17,23 +17,26 @@ import {
 } from "react-native";
 
 export default function AuthLayout() {
-   const [activeTab, setActiveTab] = useState<"login" | "signup" | null>(null);
+   const [activeTab, setActiveTab] = useState<"signin" | "signup" | null>(null);
   const router = useRouter();
   const segments = useSegments();
+  const [authenticated, setAuthenticated] = useState(true);
+
+  if (authenticated) { return <Redirect href={'/Index'} />; }
 
    // Set active tab based on current route
   useEffect(() => {
     const currentSegment = segments[segments.length - 1];
     if (currentSegment === 'sign-in') {
-      setActiveTab('login');
+      setActiveTab('signin');
     } else if (currentSegment === 'sign-up') {
       setActiveTab('signup');
     }
   }, [segments]);
 
-  const handleTabPress = (tab: "login" | "signup") => {
+  const handleTabPress = (tab: "signin" | "signup") => {
     setActiveTab(tab);
-    if (tab === "login") {
+    if (tab === "signin") {
       router.navigate("/sign-in");
     } else {
       router.navigate("/sign-up");
@@ -79,10 +82,10 @@ export default function AuthLayout() {
         </View>
         <View className="flex flex-row justify-center items-center bg-tertiary rounded-xl py-1 px-1 ml-5 mr-5">
           <TouchableOpacity
-            className={cn(activeTab === "login" ? "bg-white" : "bg-tertiary", "flex-1 rounded-lg p-5")}
-            onPress={() => handleTabPress("login")}
+            className={cn(activeTab === "signin" ? "bg-white" : "bg-tertiary", "flex-1 rounded-lg p-5")}
+            onPress={() => handleTabPress("signin")}
           >
-            <Text className={cn(activeTab === "login" ? "text-primary" : "text-black", "text-center font-bold")}>Log In</Text>
+            <Text className={cn(activeTab === "signin" ? "text-primary" : "text-black", "text-center font-bold")}>Sign In</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
