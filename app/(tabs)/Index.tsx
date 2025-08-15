@@ -12,6 +12,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import Prestasi from "./Prestasi";
 
 export default function Index() {
   const router = useRouter();
@@ -25,12 +26,12 @@ export default function Index() {
         {/* Header */}
         <View className="flex-row justify-between items-center px-6 pt-12 pb-10">
           <Image source={images.logoWhite} style={{ height: 28, width: 115 }} />
-          <View className="flex-row items-center gap-5">
-            {/* <TouchableOpacity className="p-2 rounded-full bg-white/10">
+          <View className="flex-row items-center gap-3">
+            <TouchableOpacity className="p-2 rounded-full bg-white/10">
               <Ionicons name="notifications-outline" size={20} color="white" />
-            </TouchableOpacity> */}
+            </TouchableOpacity>
             <TouchableOpacity className="p-2 rounded-full bg-white/10"
-              onPress={() => { router.push("/(tabs)/Profile") }}
+              onPress={() => { router.push("/Profile") }}
             >
               <Ionicons name="settings-outline" size={20} color="white" />
             </TouchableOpacity>
@@ -71,14 +72,14 @@ export default function Index() {
                   3.80
                 </Text>
               </View>
-              <View className="w-px bg-gray-200/40" />
+              <View className="w-px bg-gray-200/70" />
               <View className="flex-1 p-4 items-center justify-center">
                 <Text className="text-xs text-gray-100 mb-1">IPK</Text>
                 <Text className="text-base font-semibold text-primary">
                   3.75
                 </Text>
               </View>
-              <View className="w-px bg-gray-200/40" />
+              <View className="w-px bg-gray-200/70" />
               <View className="flex-1 p-4 items-center justify-center">
                 <Text className="text-xs text-gray-100 mb-1">SKS</Text>
                 <Text className="text-base font-semibold text-primary">96</Text>
@@ -87,10 +88,10 @@ export default function Index() {
           </View>
         </View>
 
-        {/* Main Content (pushed up so card overlaps) */}
+        {/* Main Content */}
         <View
           style={{ marginTop: -120 }}
-          className="bg-bgColor rounded-t-2xl flex-1 pt-40 min-h-full pb-10"
+          className="bg-bgColor rounded-t-3xl flex-1 pt-40 min-h-full pb-10"
         >
           {/* Section Title */}
           <Text style={styles.menuTitle}>Menu Sistem Informasi</Text>
@@ -113,7 +114,7 @@ export default function Index() {
                   console.log("Pressed:", item.name);
                 }}
               >
-                <View className="h-12 w-12 rounded-md bg-primary/10 items-center justify-center mb-3 p-2">
+                <View className="h-12 w-12 rounded-md items-center justify-center mb-3 p-3">
                   <Image
                     source={item.icon}
                     style={{ height: 40, width: 40 }}
@@ -125,11 +126,15 @@ export default function Index() {
                 </Text>
               </TouchableOpacity>
             )}
-            ListFooterComponent={<View style={{ height: 8 }} />}
+            ListFooterComponent={
+              <>
+                <View style={{ height: 8 }} />
+                <Prestasi />
+              </>
+            }
           />
-
           {/* Footer Space */}
-          <View className="h-4" />
+          <View className="h-8" />
         </View>
       </ScrollView>
     </SafeAreaView>
