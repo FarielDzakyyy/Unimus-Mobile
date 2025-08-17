@@ -34,4 +34,7 @@
   .btn-row {
     @apply flex flex-row items-center gap-2 mx-4 bg-white rounded-lg shadow-md shadow-black;
   }
+  .btn-col {
+    @apply flex flex-col items-center gap-2 mx-4 bg-white rounded-xl shadow-md shadow-black;
+  }
 }

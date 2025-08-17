@@ -20,25 +20,25 @@ export const menuItems = [
         id: 1,
         name: "Study Plan Card",
         icon: planCard,
-        path: "/(tabs)/study-plan"
+        path: "/screens/Study-Plan"
     },
     {
         id: 2,
         name: "Study Result Card",
         icon: resultCard,
-        path: "/(tabs)/Study-Result"    
+        path: "/screens/Study-Result"    
     },
     {
         id: 3,
         name: "Academic Transcript",
         icon: transcript,
-        path: "/(tabs)/Academic-Transcript"
+        path: "/screens/Academic-Transcript"
     },
     {
         id: 4,
         name: "Academic Calendar",
         icon: academic,
-        path: "/(tabs)/Academic-Calendar"
+        path: "/screens/Academic-Calendar"
     },
     {
         id: 5,
@@ -50,19 +50,19 @@ export const menuItems = [
         id: 6,
         name: "Exams",
         icon: exams,
-        path: "/(tabs)/Exams"
+        path: "/screens/Ujian"
     },
     {
         id: 7,
         name: "Kewajiban Pembayaran",
         icon: creditCard,
-        path: "/(tabs)/Kewajiban-Pembayaran"
+        path: "/screens/Kewajiban-Pembayaran"
     },
     {
         id: 8,
         name: "Kuesioner Kepuasan",
         icon: quiz,
-        path: "/(tabs)/Kuesioner-Kepuasan"
+        path: "/screens/Kuesioner-Kepuasan"
     }
 ];
 

@@ -1,20 +1,16 @@
-import { FONTS } from "@/constants/Font";
+import Header from "@/components/Header";
 import { jadwal } from "@/db";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { useRouter } from "expo-router";
 import React from "react";
 import {
   FlatList,
   SafeAreaView,
   ScrollView,
-  StyleSheet,
   Text,
-  TouchableOpacity,
-  View,
+  View
 } from "react-native";
 
 const Jadwal = () => {
-  const router = useRouter();
 
   const renderItem = ({ item }: any) => (
     <View className="btn-row mb-4">
@@ -49,12 +45,7 @@ const Jadwal = () => {
         showsVerticalScrollIndicator={false}
       >
         {/* Header */}
-        <View className="flex flex-row items-start justify-start mt-10 p-5 gap-5">
-          <TouchableOpacity onPress={() => router.back()}>
-            <Ionicons name="arrow-back-outline" size={24} color="white" />
-          </TouchableOpacity>
-          <Text style={styles.title}>Jadwal Page</Text>
-        </View>
+        <Header title="Jadwal Kuliah" color="white"/>
 
         {/* Jadwal List */}
         <View className="flex mt-5 bg-bgColor rounded-t-3xl min-h-full">
@@ -77,11 +68,3 @@ const Jadwal = () => {
 };
 
 export default Jadwal;
-
-const styles = StyleSheet.create({
-  title: {
-    fontSize: 16,
-    fontFamily: FONTS.PoppinsBold,
-    color: "white",
-  },
-});
