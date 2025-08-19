@@ -281,8 +281,8 @@ export const studentresultdata = {
             uas: 90,
             tugas: 80,
             score: 88,
-            grade: "A",
-            sks: 3
+            grade: "D",
+            sks: 2
         },
         {
             id: 2,
@@ -293,8 +293,8 @@ export const studentresultdata = {
             uas: 85,
             tugas: 75,
             score: 80,
-            grade: "B",
-            sks: 3
+            grade: "CD",
+            sks: 1
         },
         {
             id: 3,
@@ -306,7 +306,7 @@ export const studentresultdata = {
             tugas: 80,
             score: 85,
             grade: "A",
-            sks: 3
+            sks: 4
         },
         {
             id: 4,
@@ -326,11 +326,11 @@ export const studentresultdata = {
             code: "IF2340060",
             lecturer: "Siti Aminah, S.Kom., M.Kom",
             uts: 90,
-            uas: 95,
-            tugas: 85,
-            score: 92,
-            grade: "A",
-            sks: 3
+            uas: 35,
+            tugas: 40,
+            score: 60,
+            grade: "E",
+            sks: 1
         }
     ],
     khs2025_2026_genap: [
@@ -406,8 +406,8 @@ export const studentresultdata = {
             uas: 90,
             tugas: 80,
             score: 88,
-            grade: "A",
-            sks: 3
+            grade: "AB",
+            sks: 2
             },
             {
                 id: 2,
@@ -419,7 +419,7 @@ export const studentresultdata = {
                 tugas: 75,
                 score: 80,
                 grade: "B",
-                sks: 3
+                sks: 2
             },
             {
                 id: 3,
@@ -431,7 +431,7 @@ export const studentresultdata = {
                 tugas: 75,
                 score: 80,
                 grade: "BC",
-                sks: 3
+                sks: 1
             },
             {
                 id: 4,
@@ -442,8 +442,8 @@ export const studentresultdata = {
                 uas: 70,
                 tugas: 62,
                 score: 60,
-                grade: "C",
-                sks: 3
+                grade: "BC",
+                sks: 4
             },
             {
                 id: 5,
@@ -455,7 +455,7 @@ export const studentresultdata = {
                 tugas: 80,
                 score: 85,
                 grade: "A",
-                sks: 3
+                sks: 2
             },
             {
                 id: 6,
@@ -467,7 +467,7 @@ export const studentresultdata = {
                 tugas: 75,
                 score: 78,
                 grade: "AB",
-                sks: 3
+                sks: 2
             },
             {
                 id: 7,
@@ -478,7 +478,7 @@ export const studentresultdata = {
                 uas: 95,
                 tugas: 85,
                 score: 92,
-                grade: "A",
+                grade: "CD",
                 sks: 3
             }
     ],
@@ -568,8 +568,8 @@ export const studentresultdata = {
             uas: 85,
             tugas: 75,
             score: 80,
-            grade: "BC",
-            sks: 3
+            grade: "A",
+            sks: 2
         },
         {
             id: 2,
@@ -591,7 +591,7 @@ export const studentresultdata = {
             uts: 80,
             uas: 85,
             tugas: 75,
-            score: 80,
+            score: 70.9,
             grade: "B",
             sks: 4
         },
@@ -603,7 +603,7 @@ export const studentresultdata = {
             uts: 85,
             uas: 90,
             tugas: 80,
-            score: 88,
+            score: 70.5,
             grade: "A",
             sks: 3
         },
@@ -615,7 +615,7 @@ export const studentresultdata = {
             uts: 80,
             uas: 85,
             tugas: 75,
-            score: 80,
+            score: 68.3,
             grade: "B",
             sks: 1
         },
@@ -627,7 +627,7 @@ export const studentresultdata = {
             uts: 85,
             uas: 90,
             tugas: 80,
-            score: 88,
+            score: 98.1,
             grade: "A",
             sks: 2
         }
@@ -656,7 +656,7 @@ export const studentresultdata = {
             tugas: 80,
             score: 88,
             grade: "AB",
-            sks: 3
+            sks: 2
         },
         {
             id: 3,
@@ -675,23 +675,23 @@ export const studentresultdata = {
             subject: "Praktikum Pengolahan Citra Digital",
             code: "IF2340070",
             lecturer: "Ahmad Zaki, S.Kom., M.Kom",
-            uts: 85,
-            uas: 90,
+            uts: 40,
+            uas: 55,
             tugas: 80,
-            score: 88,
-            grade: "A",
-            sks: 3
+            score: 55.3,
+            grade: "E",
+            sks: 1
         },
         {
             id: 5,
             subject: "Pengolahan Citra Digital",
             code: "IF2340070",
             lecturer: "Ahmad Zaki, S.Kom., M.Kom",
-            uts: 80,
+            uts: 41,
             uas: 85,
             tugas: 75,
-            score: 80,
-            grade: "B",
+            score: 77.9,
+            grade: "C",
             sks: 1
         },
         {
@@ -706,5 +706,7 @@ export const studentresultdata = {
             grade: "A",
             sks: 2
         }
+    ],
+    khs2023_2024_ganjil: [
     ],
 };

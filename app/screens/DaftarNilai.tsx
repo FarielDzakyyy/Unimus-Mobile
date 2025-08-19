@@ -1,11 +1,8 @@
-import Button from "@/components/Button";
-import Header from "@/components/Header";
 import { FONTS } from "@/constants/Font";
 import { studentresultdata } from "@/db";
 import React, { useCallback, useState } from "react";
 import {
   FlatList,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
@@ -73,8 +70,8 @@ const DaftarNilai = () => {
     
     return (
       <View className="btn-row mb-4 mx-0 mt-1 shadow-md flex flex-row items-center">
-        <View className={`flex flex-col items-center ${getBgColor(item.grade)} rounded-lg p-2 h-full gap-1 w-[20%]`}>
-          <Text style={styles.nilaiText}>{item.grade}</Text>
+        <View className={`flex  ${getBgColor(item.grade)} rounded-lg p-2 h-full w-[20%] items-center`}>
+          <Text style={styles.DaftarNilaiText}>{item.grade}</Text>
         </View>
 
         <View className="flex flex-col items-start py-1 w-[55%] px-2">
@@ -131,20 +128,8 @@ const DaftarNilai = () => {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-bgColor-BLUE">
-      <ScrollView
-        className="flex-1"
-        contentContainerStyle={{ paddingBottom: 40 }}
-        showsVerticalScrollIndicator={false}
-      >
-        {/* Header */}
-        <Header title="Kartu Hasil Studi" color="white" />
-
-        {/* Kartu Hasil Studi Content */}
-        <View className="flex mt-5 p-4 bg-bgColor rounded-t-3xl min-h-full">
-          <Button text1="KHS" text2="Daftar Nilai" />
-
-          <View className="flex flex-row mt-4 p-2 mx-0 gap-4">
+    <View className="flex">
+      <View className="flex flex-row mt-4 p-2 mx-0 gap-4">
             <View className="flex-1 flex-col bg-primary rounded-xl p-2 items-center">
               <Text className="font-normal text-[15px] text-white">
                 IP Kumulatif
@@ -210,7 +195,7 @@ const DaftarNilai = () => {
           {renderSemesterDropdown()}
           
           <Text className="text-secondary font-extrabold mt-5 text-[18px]">
-            Daftar Nilai Mata Kuliah
+            Daftar DaftarNilai Mata Kuliah
           </Text>
 
           <FlatList
@@ -221,23 +206,21 @@ const DaftarNilai = () => {
             contentContainerStyle={{ paddingTop: 5 }}
             ListEmptyComponent={
               <View className="py-4 items-center">
-                <Text className="text-gray-500">Tidak ada data nilai untuk semester ini</Text>
+                <Text className="text-gray-500">Tidak ada data DaftarNilai untuk semester ini</Text>
               </View>
             }
           />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
 export default DaftarNilai;
 
-
 const styles = StyleSheet.create({
-  nilaiText: {
+  DaftarNilaiText: {
     fontFamily: FONTS.PoppinsBold,
     fontSize: 30,
     color: "white",
+    textAlign: "center"
   }
 })

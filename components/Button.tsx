@@ -1,79 +1,51 @@
-import { FONTS } from '@/constants/Font';
-import React, { useCallback, useMemo, useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { FONTS } from '@/constants/Font'
+import React from 'react'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
-// Dual toggle button (no routing). Controlled via value/onChange or internal state.
-interface ToggleNavProps {
-    text1: string;
-    text2: string;
-    value?: 1 | 2;
-    initial?: 1 | 2;
-    onChange?: (v: 1 | 2) => void;
+type TabKey = 1 | 2
+
+interface ButtonProps {
+    text1: string
+    text2: string
+    active: TabKey
+    onChange: (tab: TabKey) => void
+    className?: string
 }
 
-const Button: React.FC<ToggleNavProps> = ({
-    text1,
-    text2,
-    value,
-    initial = 1,
-    onChange
-}) => {
-    // Internal state only if not controlled
-    const [internal, setInternal] = useState<1 | 2>(initial);
-
-    // Derive active index
-    const activeIndex: 1 | 2 = useMemo(() => {
-        if (value) return value;
-        return internal;
-    }, [value, internal]);
-
-    // Handlers
-    const handlePress = useCallback((idx: 1 | 2) => {
-        if (!value) {
-            setInternal(idx);
-        }
-        onChange?.(idx);
-    }, [value, onChange]);
-
-    const baseSegmentClasses = 'flex-1 p-1 rounded-full';
-
-    const firstActive = activeIndex === 1;
-    const secondActive = activeIndex === 2;
-
+// Segmented two-option toggle button
+const Button = ({ text1, text2, active, onChange, className }: ButtonProps) => {
     return (
-        <View className="flex flex-row p-2 bg-gray-100/30 rounded-full gap-2">
+        <View className={`flex flex-row p-2 bg-gray-100/30 rounded-full gap-2 ${className || ''}`}>
             <TouchableOpacity
                 accessibilityRole="button"
-                accessibilityState={{ selected: firstActive }}
-                className={`${baseSegmentClasses} ${firstActive ? 'bg-primary' : 'bg-white shadow-2xl shadow-black elevation-8'}`}
-                onPress={() => handlePress(1)}
-                activeOpacity={0.8}
+                onPress={() => active !== 1 && onChange(1)}
+                className={`flex-1 p-1 rounded-full justify-center ${active === 1 ? 'bg-primary' : 'bg-white border border-gray-400 elevation-xl'}`}
             >
-                <Text style={styles.text} className={`${firstActive ? 'text-white' : 'text-primary'} text-center`}>
-                    {text1}
-                </Text>
+                <Text style={styles.text} className={`${active === 1 ? 'text-white' : 'text-primary'} text-center`}>{text1}</Text>
             </TouchableOpacity>
             <TouchableOpacity
                 accessibilityRole="button"
-                accessibilityState={{ selected: secondActive }}
-                className={`${baseSegmentClasses} ${secondActive ? 'bg-primary' : 'bg-white shadow-2xl shadow-black elevation-8'}`}
-                onPress={() => handlePress(2)}
-                activeOpacity={0.8}
+                onPress={() => active !== 2 && onChange(2)}
+                className={`flex-1 p-1 rounded-full justify-center ${active === 2 ? 'bg-primary' : 'bg-white border border-gray-400 elevation-xl'}`}
             >
-                <Text style={styles.text} className={`${secondActive ? 'text-white' : 'text-primary'} text-center`}>
-                    {text2}
-                </Text>
+                <Text style={styles.text} className={`${active === 2 ? 'text-white' : 'text-primary'} text-center`}>{text2}</Text>
             </TouchableOpacity>
         </View>
-    );
-};
+    )
+}
 
 export default Button
 
-
 const styles = StyleSheet.create({
     text: {
-        fontSize: 20,
+        fontSize: 16,
         fontFamily: FONTS.PoppinsBlack,
+    },
+    elevation: { 
+        shadowColor:'#000', 
+        shadowOpacity:0.15, 
+        shadowOffset:{width:0,height:2}, 
+        shadowRadius:4, 
+        elevation:4 
     }
 })

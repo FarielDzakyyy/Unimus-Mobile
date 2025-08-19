@@ -1,11 +1,9 @@
-import Button from "@/components/Button";
 import Dropdown from "@/components/Dropdown";
-import Header from "@/components/Header";
 import { studentresultdata } from "@/db";
 import React, { useCallback, useMemo, useState } from "react";
-import { SafeAreaView, ScrollView, Text, View } from "react-native";
+import { Text, View } from "react-native";
 
-const KartuHasilStudi = () => {
+const KHS = () => {
   // Transform studentresultdata object keys into array items
   const dataArray = useMemo(() => {
     return Object.entries(studentresultdata).map(([key, value]) => ({ key, list: value as any[] }));
@@ -28,14 +26,7 @@ const KartuHasilStudi = () => {
 
 
   return (
-    <SafeAreaView className="flex-1 bg-bgColor-BLUE">
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingBottom: 30 }}
-      >
-        <Header title="Kartu Hasil Studi Daftar" color="white" />
-        <View className="mt-5 rounded-t-3xl bg-bgColor px-4 pt-4 h-full">
-          <Button text1="KHS" text2="Daftar Nilai" />
+    <View className="flex">
           <Text className="text-black font-extrabold mt-5 text-[18px]">
             DATA KHS MAHASISWA
           </Text>
@@ -88,9 +79,7 @@ const KartuHasilStudi = () => {
           })}
           <View className="pb-6" />
         </View>
-      </ScrollView>
-    </SafeAreaView>
   );
 };
 
-export default KartuHasilStudi;
+export default KHS;
