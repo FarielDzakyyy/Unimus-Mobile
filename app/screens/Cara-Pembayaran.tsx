@@ -48,12 +48,12 @@ const CaraPembayaran = () => {
             </View>
 
             {/* BSI */}
-            <View className="flex flex-col mt-6 mx-4 mb-4">
+            <View className="flex flex-col mt-4 mx-4 ">
               <Text className="text-secondary font-extrabold text-[18px]">
                 Pembayaran melalui Bank BSI
               </Text>
               {PembayaranBankBSI.map((item) => (
-                <View key={item.id} className="mt-1 -mx-4">
+                <View key={item.id} className="">
                   <Dropdown 
                     header={item.method}
                     description={formatSteps(item.steps)}
@@ -67,12 +67,12 @@ const CaraPembayaran = () => {
             </View>
 
             {/* Bank Jateng Syariah */}
-            <View className="flex flex-col mt-6 mx-4 mb-4">
-              <Text className="text-secondary font-extrabold text-[18px]">
+            <View className="flex flex-col mt-4 mx-4 mb-4">
+              <Text className="text-secondary font-extrabold text-[18px] mt-1">
                 Pembayaran melalui Bank Jateng Syariah
               </Text>
               {PembayaranBankJatengSyariah.map((item) => (
-                <View key={item.id} className="mt-1 -mx-4">
+                <View key={item.id} className="">
                   <Dropdown 
                     header={item.method}
                     description={formatSteps(item.steps)}

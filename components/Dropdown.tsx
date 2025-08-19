@@ -4,12 +4,15 @@ import { Animated, Text, TouchableOpacity, View } from "react-native";
 
 type DropdownProps = {
   header: string;
-  description: string;
+  description?: string; // description now optional to allow custom children later
   title?: string;
   id?: string;
   isControlled?: boolean;
   isOpen?: boolean;
   onToggle?: (id: string) => void;
+  className?: string;
+  color?: 'primary' | 'secondary';
+  children?: React.ReactNode;
 };
 
 const Dropdown = ({
@@ -19,7 +22,10 @@ const Dropdown = ({
   id = "default",
   isControlled = false,
   isOpen: externalIsOpen,
-  onToggle
+  onToggle,
+  className = "",
+  color = 'primary',
+  children
 }: DropdownProps) => {
   const [internalIsOpen, setInternalIsOpen] = useState(false);
   const isOpen = isControlled ? externalIsOpen : internalIsOpen;
@@ -51,8 +57,12 @@ const Dropdown = ({
     outputRange: ["0deg", "180deg"],
   });
 
+  const headerBgClass = color === 'secondary' ? 'bg-secondary' : 'bg-primary';
+  const contentBorderClass = color === 'secondary' ? 'border-secondary' : 'border-primary';
+  const contentBgClass = color === 'secondary' ? 'bg-secondary/10' : 'bg-primary/10';
+
   return (
-    <View className="flex flex-col mt-2 mx-4">
+    <View className={`flex flex-col mt-2 mb-2`}>
       {title && (
         <Text className="text-secondary font-extrabold text-[18px]">
           {title}
@@ -62,7 +72,7 @@ const Dropdown = ({
       <View className={`overflow-hidden ${isOpen ? "rounded-xl" : "rounded-xl"}`}>
         <TouchableOpacity 
           onPress={toggleDropdown}
-          className={`bg-primary  p-3 flex-row items-start justify-between ${
+          className={`${headerBgClass}  p-3 flex-row items-start justify-between ${className} ${
             isOpen ? "rounded-t-xl rounded-b-0" : "rounded-xl"
           }`}
         >
@@ -73,8 +83,10 @@ const Dropdown = ({
         </TouchableOpacity>
         
         {isOpen && (
-          <View className="bg-primary/10 p-3 rounded-b-xl border border-primary">
-            <Text className="text-gray-700">{description}</Text>
+          <View className={`${contentBgClass} p-3 rounded-b-xl border ${contentBorderClass}`}>
+            {children ? children : (
+              <Text className="text-gray-700 whitespace-pre-line">{description}</Text>
+            )}
           </View>
         )}
       </View>

@@ -269,3 +269,442 @@ export const PembayaranBankJatengSyariah = [
         ]
     }
 ];
+
+export const studentresultdata = {
+    khs2026_2027_ganjil: [
+        {
+            id: 1,
+            subject: "Jaringan Komputer",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 85,
+            uas: 90,
+            tugas: 80,
+            score: 88,
+            grade: "A",
+            sks: 3
+        },
+        {
+            id: 2,
+            subject: "Rekayasa Perangkat Lunak",
+            code: "IF2340080",
+            lecturer: "Dewi Sartika, S.Kom., M.Kom",
+            uts: 80,
+            uas: 85,
+            tugas: 75,
+            score: 80,
+            grade: "B",
+            sks: 3
+        },
+        {
+            id: 3,
+            subject: "Praktikum Pemrograman Berbasis Web",
+            code: "IF2340042",
+            lecturer: "Rima Dias Ramadhani, S.Kom., M.Kom",
+            uts: 85,
+            uas: 90,
+            tugas: 80,
+            score: 85,
+            grade: "A",
+            sks: 3
+        },
+        {
+            id: 4,
+            subject: "Algoritma dan Pemrograman",
+            code: "IF2340050",
+            lecturer: "Budi Santoso, S.T., M.T.",
+            uts: 80,
+            uas: 85,
+            tugas: 75,
+            score: 78,
+            grade: "AB",
+            sks: 3
+        },
+        {
+            id: 5,
+            subject: "Basis Data",
+            code: "IF2340060",
+            lecturer: "Siti Aminah, S.Kom., M.Kom",
+            uts: 90,
+            uas: 95,
+            tugas: 85,
+            score: 92,
+            grade: "A",
+            sks: 3
+        }
+    ],
+    khs2025_2026_genap: [
+        {
+            id: 1,
+            subject: "Jaringan Komputer",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 85,
+            uas: 90,
+            tugas: 80,
+            score: 88,
+            grade: "A",
+            sks: 3
+        },
+        {
+            id: 2,
+            subject: "Rekayasa Perangkat Lunak",
+            code: "IF2340080",
+            lecturer: "Dewi Sartika, S.Kom., M.Kom",
+            uts: 80,
+            uas: 85,
+            tugas: 75,
+            score: 80,
+            grade: "B",
+            sks: 3
+        },
+        {
+            id: 3,
+            subject: "Praktikum Pemrograman Berbasis Web",
+            code: "IF2340042",
+            lecturer: "Rima Dias Ramadhani, S.Kom., M.Kom",
+            uts: 85,
+            uas: 90,
+            tugas: 80,
+            score: 85,
+            grade: "A",
+            sks: 3
+        },
+        {
+            id: 4,
+            subject: "Algoritma dan Pemrograman",
+            code: "IF2340050",
+            lecturer: "Budi Santoso, S.T., M.T.",
+            uts: 80,
+            uas: 85,
+            tugas: 75,
+            score: 78,
+            grade: "AB",
+            sks: 3
+        },
+        {
+            id: 5,
+            subject: "Basis Data",
+            code: "IF2340060",
+            lecturer: "Siti Aminah, S.Kom., M.Kom",
+            uts: 90,
+            uas: 95,
+            tugas: 85,
+            score: 92,
+            grade: "A",
+            sks: 3
+        }
+    ],
+
+    khs2025_2026_ganjil: [
+        {
+            id: 1,
+            subject: "Jaringan Komputer",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 85,
+            uas: 90,
+            tugas: 80,
+            score: 88,
+            grade: "A",
+            sks: 3
+            },
+            {
+                id: 2,
+                subject: "Rekayasa Perangkat Lunak",
+                code: "IF2340080",
+                lecturer: "Dewi Sartika, S.Kom., M.Kom",
+                uts: 80,
+                uas: 85,
+                tugas: 75,
+                score: 80,
+                grade: "B",
+                sks: 3
+            },
+            {
+                id: 3,
+                subject: "Rekayasa Perangkat Lunak",
+                code: "IF2340080",
+                lecturer: "Dewi Sartika, S.Kom., M.Kom",
+                uts: 80,
+                uas: 85,
+                tugas: 75,
+                score: 80,
+                grade: "BC",
+                sks: 3
+            },
+            {
+                id: 4,
+                subject: "Rekayasa Perangkat Lunak",
+                code: "IF2340080",
+                lecturer: "Dewi Sartika, S.Kom., M.Kom",
+                uts: 50,
+                uas: 70,
+                tugas: 62,
+                score: 60,
+                grade: "C",
+                sks: 3
+            },
+            {
+                id: 5,
+                subject: "Praktikum Pemrograman Berbasis Web",
+                code: "IF2340042",
+                lecturer: "Rima Dias Ramadhani, S.Kom., M.Kom",
+                uts: 85,
+                uas: 90,
+                tugas: 80,
+                score: 85,
+                grade: "A",
+                sks: 3
+            },
+            {
+                id: 6,
+                subject: "Algoritma dan Pemrograman",
+                code: "IF2340050",
+                lecturer: "Budi Santoso, S.T., M.T.",
+                uts: 80,
+                uas: 85,
+                tugas: 75,
+                score: 78,
+                grade: "AB",
+                sks: 3
+            },
+            {
+                id: 7,
+                subject: "Basis Data",
+                code: "IF2340060",
+                lecturer: "Siti Aminah, S.Kom., M.Kom",
+                uts: 90,
+                uas: 95,
+                tugas: 85,
+                score: 92,
+                grade: "A",
+                sks: 3
+            }
+    ],
+
+    khs2024_2025_genap: [
+        {
+            id: 1,
+            subject: "Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 80,
+            uas: 85,
+            tugas: 75,
+            score: 80,
+            grade: "BC",
+            sks: 3
+        },
+        {
+            id: 2,
+            subject: "Praktikum Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 85,
+            uas: 90,
+            tugas: 80,
+            score: 88,
+            grade: "AB",
+            sks: 3
+        },
+        {
+            id: 3,
+            subject: "Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 80,
+            uas: 85,
+            tugas: 75,
+            score: 80,
+            grade: "B",
+            sks: 4
+        },
+        {
+            id: 4,
+            subject: "Praktikum Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 85,
+            uas: 90,
+            tugas: 80,
+            score: 88,
+            grade: "A",
+            sks: 3
+        },
+        {
+            id: 5,
+            subject: "Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 80,
+            uas: 85,
+            tugas: 75,
+            score: 80,
+            grade: "B",
+            sks: 1
+        },
+        {
+            id: 6,
+            subject: "Praktikum Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 85,
+            uas: 90,
+            tugas: 80,
+            score: 88,
+            grade: "A",
+            sks: 2
+        }
+    ],
+    
+    khs2024_2025_ganjil: [
+        {
+            id: 1,
+            subject: "Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 80,
+            uas: 85,
+            tugas: 75,
+            score: 80,
+            grade: "BC",
+            sks: 3
+        },
+        {
+            id: 2,
+            subject: "Praktikum Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 85,
+            uas: 90,
+            tugas: 80,
+            score: 88,
+            grade: "AB",
+            sks: 3
+        },
+        {
+            id: 3,
+            subject: "Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 80,
+            uas: 85,
+            tugas: 75,
+            score: 80,
+            grade: "B",
+            sks: 4
+        },
+        {
+            id: 4,
+            subject: "Praktikum Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 85,
+            uas: 90,
+            tugas: 80,
+            score: 88,
+            grade: "A",
+            sks: 3
+        },
+        {
+            id: 5,
+            subject: "Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 80,
+            uas: 85,
+            tugas: 75,
+            score: 80,
+            grade: "B",
+            sks: 1
+        },
+        {
+            id: 6,
+            subject: "Praktikum Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 85,
+            uas: 90,
+            tugas: 80,
+            score: 88,
+            grade: "A",
+            sks: 2
+        }
+    ],
+
+    khs2023_2024_genap: [
+        {
+            id: 1,
+            subject: "Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 80,
+            uas: 85,
+            tugas: 75,
+            score: 80,
+            grade: "BC",
+            sks: 3
+        },
+        {
+            id: 2,
+            subject: "Praktikum Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 85,
+            uas: 90,
+            tugas: 80,
+            score: 88,
+            grade: "AB",
+            sks: 3
+        },
+        {
+            id: 3,
+            subject: "Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 80,
+            uas: 85,
+            tugas: 75,
+            score: 80,
+            grade: "B",
+            sks: 4
+        },
+        {
+            id: 4,
+            subject: "Praktikum Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 85,
+            uas: 90,
+            tugas: 80,
+            score: 88,
+            grade: "A",
+            sks: 3
+        },
+        {
+            id: 5,
+            subject: "Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 80,
+            uas: 85,
+            tugas: 75,
+            score: 80,
+            grade: "B",
+            sks: 1
+        },
+        {
+            id: 6,
+            subject: "Praktikum Pengolahan Citra Digital",
+            code: "IF2340070",
+            lecturer: "Ahmad Zaki, S.Kom., M.Kom",
+            uts: 85,
+            uas: 90,
+            tugas: 80,
+            score: 88,
+            grade: "A",
+            sks: 2
+        }
+    ],
+};

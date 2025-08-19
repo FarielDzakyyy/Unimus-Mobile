@@ -26,7 +26,7 @@ export const menuItems = [
         id: 2,
         name: "Study Result Card",
         icon: resultCard,
-        path: "/screens/Study-Result"    
+        path: "/screens/DaftarNilai"    
     },
     {
         id: 3,

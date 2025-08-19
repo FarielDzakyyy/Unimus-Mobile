@@ -27,6 +27,7 @@ module.exports = {
         error: "#F14141",
         success: "#2F9B65",
         lightPrimary: "#78C0FF",
+        yellowBG: "#FFCC00"
 
       },
     },
