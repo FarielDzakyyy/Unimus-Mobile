@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/app/screens/Header";
 import { jadwal } from "@/db";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import React from "react";

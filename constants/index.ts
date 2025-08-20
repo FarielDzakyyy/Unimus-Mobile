@@ -14,41 +14,44 @@ import logo from "@/assets/images/logo-unimus.png";
 import personCircleOutline from "@/assets/images/personCircleOutline.jpg";
 import success from "@/assets/images/success.png";
 
+import sks from "@/assets/icons/numsks.png";
+import studytime from "@/assets/icons/study-time.png";
+
 
 export const menuItems = [
     {
         id: 1,
-        name: "Study Plan Card",
+        name: "	Kartu Rencana Studi",
         icon: planCard,
-        path: "/screens/Study-Plan"
+        path: "/screens/KRS"
     },
     {
         id: 2,
-        name: "Study Result Card",
+        name: "	Kartu Hasil Studi",
         icon: resultCard,
         path: "/screens/Result"    
     },
     {
         id: 3,
-        name: "Academic Transcript",
+        name: "Transkrip Akademik",
         icon: transcript,
         path: "/screens/Academic-Transcript"
     },
     {
         id: 4,
-        name: "Academic Calendar",
+        name: "Kalender Akademik",
         icon: academic,
         path: "/screens/Academic-Calendar"
     },
     {
         id: 5,
-        name: "Class Schedule",
+        name: "Jadwal Kuliah",
         icon: timetable,
         path: "/(tabs)/Jadwal"
     },
     {
         id: 6,
-        name: "Exams",
+        name: "Ujian",
         icon: exams,
         path: "/screens/Ujian"
     },
@@ -72,5 +75,7 @@ export const images = {
     logo,
     logoWhite,
     success,
-    personCircleOutline
+    personCircleOutline,
+    sks,
+    studytime
 }

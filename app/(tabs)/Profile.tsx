@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/app/screens/Header";
 import { images } from "@/constants";
 import SimpleLineIcons from '@expo/vector-icons/SimpleLineIcons';
 import { useRouter } from "expo-router";

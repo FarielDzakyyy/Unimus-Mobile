@@ -69,7 +69,7 @@ const DaftarNilai = () => {
     };
     
     return (
-      <View className="btn-row mb-4 mx-0 mt-1 shadow-md flex flex-row items-center">
+      <View className="btn-row mb-4 mx-0 mt-1 shadow-md items-center">
         <View className={`flex  ${getBgColor(item.grade)} rounded-lg p-2 h-full w-[20%] items-center`}>
           <Text style={styles.DaftarNilaiText}>{item.grade}</Text>
         </View>
@@ -142,7 +142,7 @@ const DaftarNilai = () => {
               </Text>
               <Text className="font-bold text-[20px] text-white">{totalSKS}</Text>
             </View>
-          </View>
+        </View>
 
           <View className="btn-col mt-6 p-2 mx-0 gap-5">
             <View className="flex flex-row gap-10">

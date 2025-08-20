@@ -1,13 +1,17 @@
 import { FONTS } from "@/constants/Font";
+import { useRouter } from "expo-router";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const Prestasi = () => {
+  const router = useRouter();
   return (
     <View className="flex px-5 pt-5">
       <View className="flex-row justify-between items-center mb-4">
         <Text style={styles.menuTitle}>Prestasi Mahasiswa</Text>
-        <TouchableOpacity className="bg-white p-2 px-3 rounded-md shadow-md shadow-black">
+        <TouchableOpacity
+          onPress={() => router.push("/screens/Prestasi")}
+          className="bg-white p-2 px-3 rounded-md shadow-md shadow-black">
           <Text className="text-primary text-bold">Lihat Semua</Text>
         </TouchableOpacity>
 

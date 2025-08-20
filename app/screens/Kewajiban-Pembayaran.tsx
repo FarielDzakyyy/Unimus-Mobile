@@ -1,4 +1,4 @@
-import Header from '@/components/Header'
+import Header from '@/app/screens/Header'
 import { pembayaran } from '@/db'
 import { useRouter } from 'expo-router'
 import React, { useState } from 'react'
