@@ -1,9 +1,7 @@
 import Header from '@/app/screens/Header'
-import Button from '@/components/Button'
 import React, { useState } from 'react'
 import { SafeAreaView, ScrollView, View } from 'react-native'
 import DaftarNilai from './DaftarNilai'
-import KHS from './KHS'
 
 const Result = () => {
   const [tab, setTab] = useState<1 | 2>(1)
@@ -14,16 +12,17 @@ const Result = () => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 30 }}
       >
-        <Header title="Kartu Hasil Studi Daftar" color="white" />
+        <Header title="Kartu Hasil Studi" color="white" />
 
         <View className="mt-5 rounded-t-3xl bg-bgColor px-4 pt-4 min-h-full">
-            <Button
+            {/* <Button
               text1="KHS"
               text2="Daftar Nilai"
               active={tab}
               onChange={setTab}
-            />
-            {tab === 1 ? <KHS /> : <DaftarNilai />}
+            /> */}
+            {/* {tab === 1 ? <KHS /> : <DaftarNilai />} */}
+            <DaftarNilai />
 
         </View>
     </ScrollView>

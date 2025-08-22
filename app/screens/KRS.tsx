@@ -66,18 +66,18 @@ const KRS = () => {
   return (
     <SafeAreaView className="flex-1 bg-bgColor-BLUE">
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 30 }}>
-        <Header title="Kartu Hasil Studi Daftar" color="white" />
+        <Header title="	Kartu Rencana Studi" color="white" />
         <View className="flex mt-5 rounded-t-3xl bg-bgColor px-4 pt-4 min-h-full">
           <View className="btn-row mx-0 gap-4 p-2">
-            <View className="flex-1 flex-col bg-yellowBG rounded-xl p-2 items-start">
+            <View className="flex-1 flex-col bg-gray-300/30 rounded-xl p-2 items-start">
               <Image source={images.studytime} className="w-12 h-12 mb-1" />
-              <Text className="font-bold text-[16px] text-white">{semesterLabel}</Text>
-              <Text className="font-normal text-[14px] text-white">{taLabel}</Text>
+              <Text className="font-bold text-[16px] text-black">{semesterLabel}</Text>
+              <Text className="font-normal text-[14px] text-black">{taLabel}</Text>
             </View>
-            <View className="flex-1 flex-col bg-orangeBG rounded-xl p-2 items-start">
+            <View className="flex-1 flex-col bg-gray-300/30 rounded-xl p-2 items-start">
               <Image source={images.sks} className="w-12 h-12 mb-1" />
-              <Text className="font-bold text-[16px] text-white">{totalSKS} SKS</Text>
-              <Text className="font-normal text-[14px] text-white">{courseCount} Mata Kuliah</Text>
+              <Text className="font-bold text-[16px] text-black">{totalSKS} SKS</Text>
+              <Text className="font-normal text-[14px] text-black">{courseCount} Mata Kuliah</Text>
             </View>
           </View>
           <Text className="text-black font-extrabold mt-5 text-[18px]">DATA KRS MAHASISWA</Text>
@@ -106,7 +106,7 @@ const KRS = () => {
                 )}
                 {list.map((course: any) => (
                   <View key={course.id} className="btn-row mb-4 mx-0 mt-1 shadow-md items-center">
-                    <View className={`flex bg-orangeBG rounded-lg p-2 h-full w-[20%] items-center`}>
+                    <View className={`flex bg-gray-300/30 rounded-lg p-2 h-full w-[20%] items-center`}>
                       <Image source={images.sks} className="w-12 h-12" />
                     </View>
                     <View className="flex flex-col items-start py-1 w-[55%] px-2">

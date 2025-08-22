@@ -1,18 +1,19 @@
-import { FONTS } from "@/constants/Font";
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useRouter } from "expo-router";
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 
 const Prestasi = () => {
   const router = useRouter();
   return (
     <View className="flex px-5 pt-5">
       <View className="flex-row justify-between items-center mb-4">
-        <Text style={styles.menuTitle}>Prestasi Mahasiswa</Text>
+        <Text className="text-black font-bold text-[18px]">Prestasi Mahasiswa</Text>
         <TouchableOpacity
-          onPress={() => router.push("/screens/Prestasi")}
-          className="bg-white p-2 px-3 rounded-md shadow-md shadow-black">
-          <Text className="text-primary text-bold">Lihat Semua</Text>
+          onPress={() => router.push("/screens/PrestasiMahasiswa")}
+          className=" flex flex-row items-center justify-start gap-2 bg-white p-2 rounded-md shadow-sm shadow-black">
+          <Text className="text-primary text-bold mx-2">Lihat Semua</Text>
+          <MaterialIcons name="arrow-forward-ios" size={16} color="#3B82F6" />
         </TouchableOpacity>
 
         {/* the most recent achievements */}
@@ -59,10 +60,3 @@ const Prestasi = () => {
 
 export default Prestasi;
 
-const styles = StyleSheet.create({
-  menuTitle: {
-    fontSize: 16,
-    fontFamily: FONTS.PoppinsBold,
-    color: "black",
-  },
-});

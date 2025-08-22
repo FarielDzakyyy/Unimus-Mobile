@@ -2,6 +2,8 @@ import { FONTS } from "@/constants/Font";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
+import 'react-native-gesture-handler';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import "./global.css";
 
 export default function RootLayout() {
@@ -16,9 +18,13 @@ export default function RootLayout() {
     if (fontsLoaded) SplashScreen.hideAsync();
   }, [fontsLoaded]);
 
-  return <Stack
-    screenOptions={{
-      headerShown: false
-    }}
-  />;
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Stack
+        screenOptions={{
+          headerShown: false
+        }}
+      />
+    </GestureHandlerRootView>
+  );
 }

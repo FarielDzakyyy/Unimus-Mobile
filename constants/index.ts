@@ -3,9 +3,7 @@ import academic from "@/assets/icons/academic.png";
 import creditCard from "@/assets/icons/credit-card.png";
 import exams from "@/assets/icons/exam.png";
 import planCard from "@/assets/icons/plan-card.png";
-import quiz from "@/assets/icons/quiz.png";
 import resultCard from "@/assets/icons/result-card.png";
-import timetable from "@/assets/icons/timetable.png";
 import transcript from "@/assets/icons/transcript.png";
 
 import loginGraphic from "@/assets/images/login-graphic.png";
@@ -35,38 +33,38 @@ export const menuItems = [
         id: 3,
         name: "Transkrip Akademik",
         icon: transcript,
-        path: "/screens/Academic-Transcript"
+        path: "/screens/AcademicTranscript"
     },
     {
         id: 4,
         name: "Kalender Akademik",
         icon: academic,
-        path: "/screens/Academic-Calendar"
+        path: "/screens/KalenderAkademik"
     },
+    // {
+    //     id: 5,
+    //     name: "Jadwal Kuliah",
+    //     icon: timetable,
+    //     path: "/(tabs)/Jadwal"
+    // },
     {
         id: 5,
-        name: "Jadwal Kuliah",
-        icon: timetable,
-        path: "/(tabs)/Jadwal"
-    },
-    {
-        id: 6,
         name: "Ujian",
         icon: exams,
         path: "/screens/Ujian"
     },
     {
-        id: 7,
+        id: 6,
         name: "Kewajiban Pembayaran",
         icon: creditCard,
         path: "/screens/Kewajiban-Pembayaran"
     },
-    {
-        id: 8,
-        name: "Kuesioner Kepuasan",
-        icon: quiz,
-        path: "/screens/Kuesioner-Kepuasan"
-    }
+    // {
+    //     id: 8,
+    //     name: "Kuesioner Kepuasan",
+    //     icon: quiz,
+    //     path: "/screens/Kuesioner-Kepuasan"
+    // }
 ];
 
 
@@ -77,5 +75,6 @@ export const images = {
     success,
     personCircleOutline,
     sks,
-    studytime
+    studytime,
+    academic
 }

@@ -60,7 +60,7 @@ const KHS = () => {
                         <View className="flex flex-col justify-between items-center bg-primary p-2 rounded-xl w-[27%]">
                           <Text className="text-white font-bold text-[14px]">Total</Text>
                           <Text className="text-white font-extrabold text-[24px]">{rec.score}</Text>
-                          <Text className="text-white font-semibold text-[12px]">{rec.grade}</Text>
+                          {/* <Text className="text-white font-semibold text-[12px]">{rec.grade}</Text> */}
                         </View>
                         <View className="flex flex-col justify-between items-start w-[40%] gap-1">
                           <Text className="text-black text-[14px]">UTS: {rec.uts}</Text>
@@ -70,7 +70,7 @@ const KHS = () => {
                         <View className="bg-gray-300 w-0.5 h-[90%]" />
                         <Text className="text-secondary font-bold text-[16px] text-center w-[20%]">{rec.sks} SKS</Text>
                       </View>
-                      <Text className="text-black text-[13px]">Dosen: {rec.lecturer}</Text>
+                      {/* <Text className="text-black text-[13px]">Dosen: {rec.lecturer}</Text> */}
                     </View>
                   ))}
                 </View>

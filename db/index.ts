@@ -1008,5 +1008,349 @@ export const KALENDERAKADEMIK = {
       waktu: "02 Oktober 2026",
     }
   ],
+  Gasal_2024_2025: [
+    {
+      id: 1,
+      kegiatan: "	Penerimaan Mahasiswa Baru (Reguler)",
+      waktu: "Desember 2024 s/d Agustus 2025",
+    },
+    {
+      id: 2,
+      kegiatan: "Penerimaan Mahasiswa Baru (pindahan)",
+      waktu: "Juli s/d Agustus 2025",
+    },
+    {
+      id: 3,
+      kegiatan: "Testing Calon Mahasiswa",
+      waktu: "Di Selenggarakan Setiap Hari",
+    },
+    {
+      id: 4,
+      kegiatan: "Pengumuman Penerimaan",
+      waktu: "Di Selenggarakan Setiap Hari",
+    },
+    {
+      id: 5,
+      kegiatan: "Registrasi Mahasiswa Baru (reguler)",
+      waktu: "Setiap hari s/d 30 Agustus 2025",
+    },
+    {
+      id: 6,
+      kegiatan: "Registrasi Mahasiswa Baru (pindahan)",
+      waktu: "Juli s/d September 2025",
+    },
+    {
+      id: 7,
+      kegiatan: "Masa Ta’aruf Universitas",
+      waktu: "08 s/d 10 September 2025",
+    },
+    {
+      id: 8,
+      kegiatan: "Studium General",
+      waktu: "11 September 2025 s/d 30 Januari 2026",
+    },
+    {
+      id: 9,
+      kegiatan: "Masa Ta’aruf Fakultas",
+      waktu: "11 s/d 13 September 2025",
+    },
+    {
+      id: 10,
+      kegiatan: "Registrasi Mahasiswa dan Bimbingan Dosen Wali",
+      waktu: "1 Agustus s/d 04 September 2025",
+    },
+    {
+    id: 12,
+    kegiatan: "Masa Pengajuan Aktif Kembali",
+    waktu: "4 – 15 Agustus 2025",
+  },
+  {
+    id: 13,
+    kegiatan: "Laporan Lulusan ke LL DIKTI Wisuda ke-47",
+    waktu: "14 Oktober 2025",
+  },
+  {
+    id: 14,
+    kegiatan: "Penyelenggaraan Wisuda ke-47",
+    waktu: "28 Oktober 2025",
+  },
+  {
+    id: 15,
+    kegiatan: "Laporan Pendidikan ke Feeder PD Dikti - Tahap 2 : Semester Genap 2024/2025",
+    waktu: "15 Oktober 2025",
+  },
+  {
+    id: 16,
+    kegiatan: "Laporan Pendidikan ke Feeder PD Dikti - Tahap 1 : Semester Gasal 2025/2026",
+    waktu: "30 Oktober 2025",
+  },
+  {
+    id: 17,
+    kegiatan: "Verifikasi berkas Mahasiswa Peserta MBKM pada akun SIAMUS UNIMUS",
+    waktu: "02 September s/d 11 Oktober 2025",
+  },
+  {
+    id: 18,
+    kegiatan: "Awal dan Akhir Perkuliahan",
+    waktu: "15 September 2025 s/d 02 Januari 2026",
+  },
+  {
+    id: 19,
+    kegiatan: "Ujian Tengah Semester (UTS)",
+    waktu: "27 – 31 Oktober 2025",
+  },
+  {
+    id: 20,
+    kegiatan: "Monitoring dan Evaluasi MBKM Tengah semester",
+    waktu: "01 s/d 08 November 2025",
+  },
+  {
+    id: 21,
+    kegiatan: "Pekan Teduh",
+    waktu: "05 s/d 09 Januari 2026",
+  },
+  {
+    id: 22,
+    kegiatan: "Monitoring dan Evaluasi MBKM Akhir semester",
+    waktu: "01 s/d 05 Januari 2026",
+  },
+  {
+    id: 23,
+    kegiatan: "Ujian Akhir Semester (UAS)",
+    waktu: "12 s/d 23 Januari 2026",
+  },
+  {
+    id: 24,
+    kegiatan: "Laporan akhir dan penilaian program MBKM oleh PIC",
+    waktu: "14 s/d 15 Januari 2026",
+  },
+  {
+    id: 25,
+    kegiatan: "Yudisium Akhir Semester",
+    waktu: "28 Pebruari 2026",
+  },
+  {
+    id: 26,
+    kegiatan: "9. Konversi nilai dan pelaporan kegiatan MBKM oleh Program Studi",
+    waktu: "16 Januari s/d 21 Februari 2026",
+  },
+  {
+    id: 27,
+    kegiatan: "Kuliah Sisipan Semester Gasal 2025/2026",
+    waktu: "02 s/d 13 Februari 2026",
+  },
+  {
+    id: 28,
+    kegiatan: "Upgrading kegiatan MBKM",
+    waktu: "12 s/d 19 Februari 2026",
+  },
+  {
+    id: 29,
+    kegiatan: "Kuliah Kerja Nyata (KKN)",
+    waktu: "Februari 2026",
+  },
+  {
+    id: 30,
+    kegiatan: "Laporan Lulusan ke LLDIKTI Wisuda ke-48",
+    waktu: "10 Februari 2026",
+  },
+  {
+    id: 31,
+    kegiatan: "Penyelenggaraan Wisuda ke-48",
+    waktu: "24 Februari 2026",
+  },
+  {
+    id: 32,
+    kegiatan: "Penyusunan Laporan Pendidikan Semester Gasal 2025/2026 Tingkat Program Studi Aktifitas Kegiatan Mengajar (AKM) oleh Program Studi",
+    waktu: "Februari s/d Maret 2026",
+  },
+  {
+    id: 33,
+    kegiatan: "Pengiriman Laporan Akademik Kegiatan MBKM oleh Program Studi dan PIC MBKM ke LP3M",
+    waktu: "27 Februari 2026",
+  },
+  {
+    id: 34,
+    kegiatan: "Pengiriman Laporan Pendidikan oleh Program Studi ke Universitas",
+    waktu: "10 April 2026",
+  }
+  ],
+
+  Genap_2024_2025: [
+    {
+      id: 1,
+      kegiatan: "Penerimaan Mahasiswa Baru (pindahan, dan profesi)",
+      waktu: "Januari s/d Maret 2025",
+    },
+    {
+      id: 2,
+      kegiatan: "Registrasi Mahasiswa Baru (pindahan)",
+      waktu: "Januari s/d Maret 2025",
+    },
+    {
+      id: 3,
+      kegiatan: "Herregistrasi Mahasiswa dan Bimbingan Dosen Wali",
+      waktu: "02 Februari s/d 06 Maret 2026",
+    },
+    {
+      id: 4,
+      kegiatan: "Masa Pengajuan Cuti",
+      waktu: "26 Januari s/d 07 Pebruari 2025",
+    },
+    {
+      id: 5,
+      kegiatan: "Masa Pengajuan Aktif Kembali",
+      waktu: "26 Januari s/d 07 Pebruari 2025",
+    },
+    {
+      id: 6,
+      kegiatan: "Laporan Tahap 2: Laporan Pendidikan Semester Gasal 2025/2026 ke Feeder PD Dikti Aktifitas Kegiatan Mengajar (AKM)",
+      waktu: "16 April 2026",
+    },
+    {
+      id: 7,
+      kegiatan: "Verifikasi berkas peserta MBKM",
+      waktu: "02 Februari s/d 06 Maret 2026",
+    },
+    {
+      id: 8,
+      kegiatan: "Libur Idul Fitri 1447 H",
+      waktu: "16 – 25 Maret 2026",
+    },
+    {
+      id: 9,
+      kegiatan: "Laporan Lulusan ke LLDIKTI Wisuda ke-49",
+      waktu: "16 Juni 2026",
+    },
+    {
+      id: 10,
+      kegiatan: "Penyelenggaraan Wisuda ke-49",
+      waktu: "30 Juni 2026",
+    },
+    {
+      id: 11,
+      kegiatan: "Awal dan Akhir Perkuliahan",
+      waktu: "09 Maret s/d 03 Juli 2026",
+    },
+    {
+      id: 12,
+      kegiatan: "Monitoring dan Evaluasi MBKM Tengah Semester",
+      waktu: "09 s/d 11 Mei 2026",
+    },
+    {
+      id: 13,
+      kegiatan: "Ujian Tengah Semester",
+      waktu: "20 s/d 24 April 2026",
+    },
+    {
+      id: 14,
+      kegiatan: "Pekan Teduh",
+      waktu: "06 s/d 10 Juli 2026",
+    },
+    {
+      id: 15,
+      kegiatan: "Ujian Akhir Semester",
+      waktu: "13 s/d 24 Juli 2026",
+    },
+    {
+      id: 16,
+      kegiatan: "Monitoring dan Evaluasi MBKM Akhir Semester",
+      waktu: "16 s/d 20 Juli 2026",
+    },
+    {
+      id: 17,
+      kegiatan: "Yudisium Akhir Semester",
+      waktu: "07 Agustus 2026",
+    },
+    {
+      id: 18,
+      kegiatan: "Laporan akhir dan penilaian program MBKM oleh PIC",
+      waktu: "16 s/d 19 Juli 2026",
+    },
+    {
+      id: 19,
+      kegiatan: "Konversi nilai dan pelaporan kegiatan MBKM oleh Program Studi",
+      waktu: "23 s/d 27 Juli 2026",
+    },
+    {
+      id: 20,
+      kegiatan: "Kuliah Sisipan Semester Genap 2025/2026",
+      waktu: "10 s/d 21 Agustus 2026",
+    },
+    {
+      id: 21,
+      kegiatan: "AMAI Program Studi",
+      waktu: "Mei 2026",
+    },
+    {
+      id: 22,
+      kegiatan: "AMNAI Unit",
+      waktu: "Juni 2026",
+    },
+    {
+      id: 23,
+      kegiatan: "Kuliah Kerja Nyata (KKN)",
+      waktu: "Agustus 2026",
+    },
+    {
+      id: 24,
+      kegiatan: "Penyusunan Laporan Pendidikan Semester Genap 2025/2026 Tingkat Program Studi Aktifitas Kegiatan Mengajar (AKM) oleh Program Studi",
+      waktu: "Agustus s/d September 2026",
+    },
+    {
+      id: 25,
+      kegiatan: "Pengiriman Laporan Akademik Kegiatan MBKM oleh Program Studi dan PIC MBKM ke LP3M",
+      waktu: "28 Agustus 2026",
+    },
+    {
+      id: 26,
+      kegiatan: "Pengiriman Laporan Pendidikan oleh Program Studi ke Universitas",
+      waktu: "02 Oktober 2026",
+    }
+  ],
 };
 
+export const prestaasiMahasiswa = [
+  {
+    id: 1,
+    namaKejuaraan: "Lomba Pemrograman Game Dalam Rapat Koordinasi Nasional Asosiasi Program Studi Informatika (APSI) Perguruan Tinggi Muhammadiyah/’Aisyiyah (PTMA)",
+    tingkat: "Nasional",
+    juara: "1",
+    penyelenggara: "Universitas Ahmad Dahlan"
+  },
+  {
+    id: 2,
+    namaKejuaraan: "Lomba Debat",
+    tingkat: "International",
+    juara: "2",
+    penyelenggara: "Universitas Muhammadiyah Yogyakarta"
+  },
+  {
+    id: 3,
+    namaKejuaraan: "Lomba Karya Tulis Ilmiah",
+    tingkat: "Nasional",
+    juara: "1",
+    penyelenggara: "Universitas Gadjah Mada"
+  },
+  {
+    id: 4,
+    namaKejuaraan: "Lomba Desain Grafis",
+    tingkat: "Lokal",
+    juara: "Lainnya",
+    penyelenggara: "Universitas Negeri Yogyakarta"
+  },
+  {
+    id: 5,
+    namaKejuaraan: "Lomba Fotografi",
+    tingkat: "Nasional",
+    juara: "3",
+    penyelenggara: "Universitas Negeri Yogyakarta"
+  },
+  {
+    id: 6,
+    namaKejuaraan: "Lomba Video Kreatif",
+    tingkat: "Nasional",
+    juara: "1",
+    penyelenggara: "Universitas Negeri Yogyakarta"
+  }
+]
