@@ -87,10 +87,10 @@ const AcademicTranscript = () => {
         <Header title="Transkrip Akademik" color="white" />
 
         <View className="flex mt-5 rounded-t-3xl bg-bgColor px-4 pt-4 min-h-full">
-          <View className="btn-col mx-0 gap-4 p-4 items-start mt-3">
-            <Text className="font-extrabold text-[16px] text-black">
+          <View className="btn-col mx-0 gap-4 p-4 items-start">
+            {/* <Text className="font-extrabold text-[16px] text-black">
               Ringkasan Prestasi
-            </Text>
+            </Text> */}
             <View className="flex flex-row gap-4">
               <View className="flex-1 flex-col bg-gray-300/30 rounded-md p-4 items-center">
                 <Text className="font-normal text-[14px] text-gray-100">
@@ -127,7 +127,7 @@ const AcademicTranscript = () => {
                   {course.subject}
                 </Text>
                 <Text className="text-gray-100 font-normal text-xs">
-                  {course.sks} SKS
+                  {course.sks} SKS  
                 </Text>
               </View>
               <Text

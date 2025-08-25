@@ -1,6 +1,6 @@
 import { FONTS } from "@/constants/Font";
 import { studentresultdata } from "@/db";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import {
   FlatList,
   ScrollView,
@@ -31,6 +31,67 @@ const DaftarNilai = () => {
   );
   const courseData = studentresultdata[selectedPeriod];
 
+  // Grade -> grade point mapping (assumption, adjust if campus policy differs)
+  const GRADE_POINTS: Record<string, number> = useMemo(
+    () => ({
+      A: 4.0,
+      AB: 3.5,
+      B: 3.0,
+      BC: 2.5,
+      C: 2.0,
+      CD: 1.5,
+      D: 1.0,
+      DE: 0.5,
+      E: 0.0,
+    }),
+    []
+  );
+
+  // Helper to parse period key for chronological ordering
+  const parsePeriod = useCallback((period: string) => {
+    const m = period.match(/^khs(\d{4})_(\d{4})_(ganjil|genap)$/);
+    if (!m)
+      return { start: Number.NEGATIVE_INFINITY, end: Number.NEGATIVE_INFINITY, sem: 0 };
+    return { start: parseInt(m[1], 10), end: parseInt(m[2], 10), sem: m[3] === "ganjil" ? 0 : 1 };
+  }, []);
+
+  // Ordered periods (oldest -> newest)
+  const orderedPeriods = useMemo(() => {
+    return (Object.keys(studentresultdata) as Period[]).sort((a, b) => {
+      const pa = parsePeriod(a);
+      const pb = parsePeriod(b);
+      if (pa.start !== pb.start) return pa.start - pb.start;
+      if (pa.sem !== pb.sem) return pa.sem - pb.sem;
+      return 0;
+    });
+  }, [parsePeriod]);
+
+  // Semester (selected) metrics
+  const { semesterSKS, semesterGradePoints, semesterIP } = useMemo(() => {
+    const semesterSKS = courseData.reduce((acc, c) => acc + c.sks, 0);
+    const semesterGradePoints = courseData.reduce(
+      (acc, c) => acc + (GRADE_POINTS[c.grade] ?? 0) * c.sks,
+      0
+    );
+    const semesterIP = semesterSKS ? semesterGradePoints / semesterSKS : 0;
+    return { semesterSKS, semesterGradePoints, semesterIP };
+  }, [courseData, GRADE_POINTS]);
+
+  // Cumulative metrics up to selected period
+  const { cumulativeSKS, cumulativeGradePoints, cumulativeIPK } = useMemo(() => {
+    const idx = orderedPeriods.indexOf(selectedPeriod);
+    const cumulativeCourses = orderedPeriods
+      .slice(0, idx + 1)
+      .flatMap((p) => studentresultdata[p]);
+    const cumulativeSKS = cumulativeCourses.reduce((acc, c) => acc + c.sks, 0);
+    const cumulativeGradePoints = cumulativeCourses.reduce(
+      (acc, c) => acc + (GRADE_POINTS[c.grade] ?? 0) * c.sks,
+      0
+    );
+    const cumulativeIPK = cumulativeSKS ? cumulativeGradePoints / cumulativeSKS : 0;
+    return { cumulativeSKS, cumulativeGradePoints, cumulativeIPK };
+  }, [GRADE_POINTS, orderedPeriods, selectedPeriod]);
+
   // Calculate the total number of each grade
   const calculateGradeCounts = useCallback(() => {
     const counts = { A: 0, AB: 0, B: 0, BC: 0, C: 0, CD: 0, D: 0, DE: 0, E: 0 };
@@ -48,7 +109,7 @@ const DaftarNilai = () => {
     return { counts, totalSKS };
   }, []);
 
-  const { counts, totalSKS } = calculateGradeCounts();
+  const { counts, totalSKS } = calculateGradeCounts(); // still available if needed for future UI
   // Render item for FlatList
   const renderCourseItem = ({ item }: { item: CourseData }) => {
     // Define background color based on grade
@@ -147,13 +208,13 @@ const DaftarNilai = () => {
                 Jumlah SKS
               </Text>
               <Text className="font-extrabold text-[20px] text-primary">
-                22
+                {semesterSKS}
               </Text>
             </View>
             <View className="flex-1 flex-col bg-gray-300/30 rounded-md p-4 items-center">
               <Text className="font-normal text-[14px] text-gray-100">IP</Text>
               <Text className="font-extrabold text-[20px] text-primary">
-                3.56
+                {semesterSKS ? semesterIP.toFixed(2) : "-"}
               </Text>
             </View>
           </View>
@@ -164,13 +225,13 @@ const DaftarNilai = () => {
                 SKS Kumulatif
               </Text>
               <Text className="font-extrabold text-[20px] text-primary">
-                64
+                {cumulativeSKS}
               </Text>
             </View>
             <View className="flex-1 flex-col bg-gray-300/30 rounded-md p-4 items-center">
               <Text className="font-normal text-[14px] text-gray-100">IPK</Text>
               <Text className="font-extrabold text-[20px] text-primary">
-                3.70
+                {cumulativeSKS ? cumulativeIPK.toFixed(2) : "-"}
               </Text>
             </View>
           </View>

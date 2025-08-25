@@ -20,8 +20,8 @@ const Result = () => {
               text2="Daftar Nilai"
               active={tab}
               onChange={setTab}
-            /> */}
-            {/* {tab === 1 ? <KHS /> : <DaftarNilai />} */}
+            />
+            {tab === 1 ? <KHS /> : <DaftarNilai />} */}
             <DaftarNilai />
 
         </View>

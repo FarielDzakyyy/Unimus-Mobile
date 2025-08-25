@@ -180,7 +180,7 @@ const PrestasiMahasiswa = () => {
           )}
           {filtered.map(item => (
             <TouchableOpacity key={item.id} activeOpacity={0.9} onLongPress={() => setOptionsId(item.id)} className="flex px-4 pt-2 mt-3">
-              <View className="flex flex-col bg-primary/30 gap-2 p-3 rounded-xl border border-primary">
+              <View className="flex flex-col bg-primary gap-2 p-3 rounded-xl border border-primary">
                 <View className="flex flex-row max-w-[100%] justify-between items-center">
                   <Text className="text-sm font-semibold text-black max-w-[50%]">
                     {item.penyelenggara}

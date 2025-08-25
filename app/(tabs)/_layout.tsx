@@ -95,6 +95,7 @@ const TabLayout = () => {
         component={require('./Chat').default}
         options={{
           title: "Ask AI",
+          tabBarStyle: { display: 'none' },
           tabBarIcon: ({ focused }) => (
             <TabBarIcon
               title="Ask AI"

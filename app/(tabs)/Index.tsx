@@ -67,7 +67,7 @@ export default function Index() {
             {/* Quick Stats */}
             <View className="flex-row mt-5 bg-tertiary rounded-xl overflow-hidden">
               <View className="flex-1 p-4 items-center justify-center">
-                <Text className="text-xs text-gray-100 mb-1">IPS</Text>
+                <Text className="text-xs text-gray-100 mb-1">IP</Text>
                 <Text className="text-base font-semibold text-primary">
                   3.80
                 </Text>
@@ -81,7 +81,7 @@ export default function Index() {
               </View>
               <View className="w-px bg-gray-200/70" />
               <View className="flex-1 p-4 items-center justify-center">
-                <Text className="text-xs text-gray-100 mb-1">SKS</Text>
+                <Text className="text-xs text-gray-100 mb-1">SKS Kumulatif</Text>
                 <Text className="text-base font-semibold text-primary">96</Text>
               </View>
             </View>

@@ -14,7 +14,7 @@ import success from "@/assets/images/success.png";
 
 import sks from "@/assets/icons/numsks.png";
 import studytime from "@/assets/icons/study-time.png";
-
+import avatar from "@/assets/images/avatarImage.jpg";
 
 export const menuItems = [
     {
@@ -76,5 +76,6 @@ export const images = {
     personCircleOutline,
     sks,
     studytime,
-    academic
+    academic,
+    avatar
 }
