@@ -1320,14 +1320,14 @@ export const prestaasiMahasiswa = [
   },
   {
     id: 2,
-    namaKejuaraan: "Lomba Debat",
+    namaKejuaraan: "Exploring Skills For Addressing Global Challenges\". Category: Article.",
     tingkat: "International",
     juara: "2",
     penyelenggara: "Universitas Muhammadiyah Yogyakarta"
   },
   {
     id: 3,
-    namaKejuaraan: "Lomba Karya Tulis Ilmiah",
+    namaKejuaraan: "Ahmad Dahlan International Youth Camp 2024 \"Exploring Skills For Addressing Global Challenges\". Category: Article.",
     tingkat: "Nasional",
     juara: "1",
     penyelenggara: "Universitas Gadjah Mada"

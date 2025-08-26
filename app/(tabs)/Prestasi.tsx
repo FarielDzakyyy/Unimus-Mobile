@@ -18,7 +18,7 @@ const Prestasi = () => {
 
         {/* the most recent achievements */}
       </View>
-      <View className="bg-white rounded-md p-6 shadow-md shadow-black  elevation-md border border-gray-50 ">
+      <View className="flex flex-col gap-4">
         <View className="flex flex-col gap-2 mb-2">
           <View className="flex flex-row justify-between items-center mb-2">
             <Text className="text-sm font-semibold text-dark-100">Universitas Ahmad Dahlan</Text>
@@ -28,7 +28,7 @@ const Prestasi = () => {
           <Text className="text-sm font-normal text-bgColor-BLUE/70">
             Ahmad Dahlan International Youth Camp 2024 "Exploring Skills For Addressing Global Challenges". Category: Article.
           </Text>
-          <View className="w-full h-1 bg-gray-200 mt-2" />
+          <View className="w-full h-0.5 bg-gray-200 mt-2" />
         </View>
         <View className="flex flex-col gap-2 mb-2">
           <View className="flex flex-row justify-between items-center mb-2">
@@ -39,7 +39,7 @@ const Prestasi = () => {
           <Text className="text-sm font-normal text-bgColor-BLUE/70">
             Ahmad Dahlan International Youth Camp 2024 "Exploring Skills For Addressing Global Challenges". Category: Article.
           </Text>
-          <View className="w-full h-1 bg-gray-200 mt-2" />
+          <View className="w-full h-0.5 bg-gray-200 mt-2" />
         </View>
         <View className="flex flex-col gap-2 mb-2">
           <View className="flex flex-row justify-between items-center mb-2">
@@ -50,7 +50,7 @@ const Prestasi = () => {
           <Text className="text-sm font-normal text-bgColor-BLUE/70">
             Ahmad Dahlan International Youth Camp 2024 "Exploring Skills For Addressing Global Challenges". Category: Article.
           </Text>
-          <View className="w-full h-1 bg-gray-200 mt-2" />
+          {/* <View className="w-full h-1 bg-gray-200 mt-2" /> */}
         </View>
         
       </View>

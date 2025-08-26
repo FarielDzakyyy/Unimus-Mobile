@@ -28,7 +28,7 @@ const SignIn = () => {
       
       // validation against user database here
       
-      router.replace('/successful')
+      router.replace('/Index')
     } catch (error: any) {
       Alert.alert('Error', error.message || 'Login failed. Please check your credentials and try again.');
     } finally {

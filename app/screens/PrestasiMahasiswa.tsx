@@ -165,7 +165,7 @@ const PrestasiMahasiswa = () => {
         </View>
 
         {/* List */}
-        <View className="flex mt-5 bg-white rounded-t-3xl min-h-full">
+        <View className="flex mt-5 bg-bgColor rounded-t-3xl min-h-full">
           <View className='flex-row items-center justify-between  mt-5 mb-5 mx-4'>
             <Text className="text-black font-extrabold text-[18px]">
               Data Prestasi Mahasiswa
@@ -180,12 +180,12 @@ const PrestasiMahasiswa = () => {
           )}
           {filtered.map(item => (
             <TouchableOpacity key={item.id} activeOpacity={0.9} onLongPress={() => setOptionsId(item.id)} className="flex px-4 pt-2 mt-3">
-              <View className="flex flex-col bg-primary gap-2 p-3 rounded-xl border border-primary">
+              <View className="flex flex-col bg-white shadow-md gap-2 p-3 rounded-xl ">
                 <View className="flex flex-row max-w-[100%] justify-between items-center">
                   <Text className="text-sm font-semibold text-black max-w-[50%]">
                     {item.penyelenggara}
                   </Text>
-                  <View className='flex-row bg-yellowBG rounded-md p-1 gap-2 items-center'>
+                  <View className='flex-row rounded-md p-1 gap-2 items-center'>
                     <FontAwesome5 name="award" size={15} color={Colors.primary} />
                     <Text className="text-md font-bold text-primary">{item.juara}</Text>
                   </View>
@@ -193,7 +193,7 @@ const PrestasiMahasiswa = () => {
                     {item.tingkat}
                   </Text>
                 </View>
-                <View className="w-full h-0.5 bg-primary" />
+                {/* <View className="w-full h-0.5 bg-primary" /> */}
                 <Text className="text-md font-normal text-bgColor-BLUE">
                   {item.namaKejuaraan}
                 </Text>

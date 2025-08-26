@@ -13,6 +13,7 @@ import {
   View,
 } from "react-native";
 import Prestasi from "./Prestasi";
+import ProfileCard from "./ProfileCard";
 
 export default function Index() {
   const router = useRouter();
@@ -38,55 +39,8 @@ export default function Index() {
           </View>
         </View>
 
-        {/* Student Profile Card (overlapping) */}
-        <View className="relative px-4 z-10 -mt-4">
-          <View
-            className="bg-white rounded-2xl p-5 shadow-xl border border-gray-50"
-            style={{ elevation: 6 }}
-          >
-            <View className="flex flex-col items-center">
-              <View className="h-auto w-auto rounded-full bg-white items-center justify-center p-1 shadow-xl shadow-black">
-                <Image
-                  source={images.personCircleOutline}
-                  style={{ height: 55, width: 55 }}
-                  className="rounded-full "
-                />
-              </View>
-              <View className="items-center">
-                <Text className="text-lg font-bold text-dark-100">
-                  Richmond Ampah-Mensah
-                </Text>
-                <Text className="text-gray-100 mt-0.5">C2C023012</Text>
-                <Text className="text-lg font-bold text-primary">
-                  Fakultas Teknik dan Ilmu Komputer
-                </Text>
-                <Text className="text-gray-100 mt-0.5">Informatika</Text>
-              </View>
-            </View>
-
-            {/* Quick Stats */}
-            <View className="flex-row mt-5 bg-tertiary rounded-xl overflow-hidden">
-              <View className="flex-1 p-4 items-center justify-center">
-                <Text className="text-xs text-gray-100 mb-1">IP</Text>
-                <Text className="text-base font-semibold text-primary">
-                  3.80
-                </Text>
-              </View>
-              <View className="w-px bg-gray-200/70" />
-              <View className="flex-1 p-4 items-center justify-center">
-                <Text className="text-xs text-gray-100 mb-1">IPK</Text>
-                <Text className="text-base font-semibold text-primary">
-                  3.75
-                </Text>
-              </View>
-              <View className="w-px bg-gray-200/70" />
-              <View className="flex-1 p-4 items-center justify-center">
-                <Text className="text-xs text-gray-100 mb-1">SKS Kumulatif</Text>
-                <Text className="text-base font-semibold text-primary">96</Text>
-              </View>
-            </View>
-          </View>
-        </View>
+        {/* Student Profile Card */}
+        <ProfileCard />
 
         {/* Main Content */}
         <View

@@ -1,7 +1,7 @@
 import { images } from "@/constants";
 import { FONTS } from "@/constants/Font";
 import cn from "clsx";
-import { Redirect, Slot, useRouter, useSegments } from "expo-router";
+import { Slot, useRouter, useSegments } from "expo-router";
 import React, { useEffect, useState } from "react";
 import {
   Dimensions,
@@ -22,7 +22,7 @@ export default function AuthLayout() {
   const segments = useSegments();
   const [authenticated, setAuthenticated] = useState(true);
 
-  if (authenticated) { return <Redirect href={'/Index'} />; }
+ // if (authenticated) { return <Redirect href={'/Index'} />; }
 
    // Set active tab based on current route
   useEffect(() => {
