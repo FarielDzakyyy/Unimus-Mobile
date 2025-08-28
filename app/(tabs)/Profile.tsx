@@ -1,4 +1,3 @@
-import Header from "@/app/screens/Header";
 import { images } from "@/constants";
 import SimpleLineIcons from '@expo/vector-icons/SimpleLineIcons';
 import { useRouter } from "expo-router";
@@ -11,6 +10,7 @@ import {
   TouchableOpacity,
   View
 } from "react-native";
+import Header from "../screens/Header";
 
 const Profile = () => {
   const router = useRouter();
@@ -22,7 +22,16 @@ const Profile = () => {
         showsVerticalScrollIndicator={false}
       >
         {/* Header */}
-        <Header title="Profile" color="black" className="gap-0 items-center" />
+        <Header title="Profil Mahasiswa" color="black" className="items-center" />
+        {/* <View
+        className={("flex flex-row items-center mt-10 p-5 gap-3")}
+      >
+        <TouchableOpacity onPress={() => router.back()}>
+          <Ionicons name="arrow-back-outline" size={24} color="black" />
+        </TouchableOpacity>
+          <Text className="font-bold">Profile</Text>
+        </View> */}
+
 
         <View className="flex flex-col items-center mt-5">
           <View className="h-auto w-auto rounded-full bg-white items-center p-1 shadow-xl shadow-black">

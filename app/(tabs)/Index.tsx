@@ -26,7 +26,7 @@ export default function Index() {
       >
         {/* Header */}
         <View className="flex-row justify-between items-center px-6 pt-12 pb-10">
-          <Image source={images.logoWhite} style={{ height: 28, width: 115 }} />
+          <Image source={images.logoWhite} style={{ height: 28, width: 120 }} />
           <View className="flex-row items-center gap-3">
             <TouchableOpacity className="p-2 rounded-full bg-white/10">
               <Ionicons name="notifications-outline" size={20} color="white" />
@@ -61,7 +61,7 @@ export default function Index() {
             renderItem={({ item }) => (
               <TouchableOpacity
                 activeOpacity={0.8}
-                className="flex-1 items-center bg-white rounded-2xl p-4 shadow-md shadow-black"
+                className="flex-1 items-center justify-center bg-white rounded-2xl p-4 shadow-md shadow-black"
                 onPress={() => {
                   // navigate or handle action
                   router.push(item.path as any);
@@ -75,7 +75,7 @@ export default function Index() {
                     resizeMode="contain"
                   />
                 </View>
-                <Text className="text-sm font-semibold text-dark-100 leading-tight">
+                <Text className="text-sm font-semibold text-dark-100">
                   {item.name}
                 </Text>
               </TouchableOpacity>

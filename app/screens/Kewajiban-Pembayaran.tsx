@@ -22,7 +22,7 @@ const KewajibanPembayaran = () => {
         showsVerticalScrollIndicator={false}
       >
         <View className='flex-1 bg-primary rounded-b-[30px] shadow-2xl shadow-black p-2'>
-          <Header title="Kewajiban Pembayaran" color="white"/>
+          <Header title="Kewajiban Pembayaran" color="white" className='gap-3'/>
 
           <View className='flex flex-col items-center justify-center mb-4'>
             <View className='flex flex-row items-baseline gap-1'>

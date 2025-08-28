@@ -135,9 +135,10 @@ const DaftarNilai = () => {
     return (
       <View className="btn-row mb-4 mx-0 mt-1 shadow-md items-center">
         <View
-          className={`flex  ${getBgColor(item.grade)} rounded-lg p-2 h-full w-[20%] items-center`}
+          className={`flex flex-col ${getBgColor(item.grade)} rounded-lg p-2 h-full w-[20%] items-center`}
         >
           <Text style={styles.DaftarNilaiText}>{item.grade}</Text>
+          <Text className="text-sm text-white font-bold">{item.sks * GRADE_POINTS[item.grade]}</Text>
         </View>
 
         <View className="flex flex-col items-start py-1 w-[55%] px-2">

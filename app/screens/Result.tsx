@@ -12,7 +12,7 @@ const Result = () => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 30 }}
       >
-        <Header title="Kartu Hasil Studi" color="white" />
+        <Header title="Kartu Hasil Studi" color="white" className='gap-3' />
 
         <View className="mt-5 rounded-t-3xl bg-bgColor px-4 pt-4 min-h-full">
             {/* <Button

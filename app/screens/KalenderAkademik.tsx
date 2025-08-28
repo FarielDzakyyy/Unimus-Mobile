@@ -58,7 +58,7 @@ const KalenderAkademik = () => {
   return (
     <SafeAreaView className="flex-1 bg-bgColor-BLUE">
       <ScrollView className="flex-1" contentContainerStyle={{ paddingBottom: 40 }} showsVerticalScrollIndicator={false}>
-        <Header title="Kalender Akademik" color="white" />
+        <Header title="Kalender Akademik" color="white" className="gap-3"/>
         <View className="flex mt-5 bg-gray-200 min-h-full p-4 rounded-t-3xl">
           <View className="flex flex-col items-center justify-start gap-2 w-full">
             <View className="flex flex-col items-start justify-start gap-3 w-full">

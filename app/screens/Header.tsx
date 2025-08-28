@@ -19,7 +19,7 @@ const Header = ({
   const router = useRouter();
   return (
       <View
-        className={cn("flex flex-row items-start mt-10 p-5 gap-3", className)}
+        className={cn("flex flex-row items-center justify-start mt-10 p-5", className)}
       >
         <TouchableOpacity onPress={() => router.back()}>
           <Ionicons name="arrow-back-outline" size={24} color={color} />

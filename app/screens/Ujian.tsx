@@ -45,7 +45,7 @@ const Ujian = () => {
         showsVerticalScrollIndicator={false}
       >
         {/* Header */}
-        <Header title="Jadwal Ujian" color="white"/>
+        <Header title="Jadwal Ujian" color="white" className="gap-3"/>
 
         {/* Ujian List */}
         <View className="flex mt-5 bg-bgColor rounded-t-3xl min-h-full">

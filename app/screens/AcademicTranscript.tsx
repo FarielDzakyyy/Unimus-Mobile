@@ -84,7 +84,7 @@ const AcademicTranscript = () => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 30 }}
       >
-        <Header title="Transkrip Akademik" color="white" />
+        <Header title="Transkrip Akademik" color="white" className="gap-3"/>
 
         <View className="flex mt-5 rounded-t-3xl bg-bgColor px-4 pt-4 min-h-full">
           <View className="btn-col mx-0 gap-4 p-4 items-start">
@@ -130,11 +130,14 @@ const AcademicTranscript = () => {
                   {course.sks} SKS  
                 </Text>
               </View>
-              <Text
-                className={`font-extrabold text-[20px] ${getGradeColor(course.grade)}`}
-              >
-                {course.grade}
-              </Text>
+              <View className="flex-col items-center gap-1 pr-3">
+                  <Text className={`font-extrabold text-[20px] ${getGradeColor(course.grade)}`}>
+                    {course.grade}
+                  </Text>
+                  <Text className="text-gray-100 font-normal text-xs">
+                  {course.sks * gradePoints[course.grade]} 
+                </Text>
+                </View>
             </View>
           ))}
           {!courses.length && (

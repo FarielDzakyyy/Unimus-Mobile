@@ -45,7 +45,7 @@ const Jadwal = () => {
         showsVerticalScrollIndicator={false}
       >
         {/* Header */}
-        <Header title="Jadwal Kuliah" color="white"/>
+        <Header title="Jadwal Kuliah" color="white" className="gap-3"/>
 
         {/* Jadwal List */}
         <View className="flex mt-5 bg-bgColor rounded-t-3xl min-h-full">

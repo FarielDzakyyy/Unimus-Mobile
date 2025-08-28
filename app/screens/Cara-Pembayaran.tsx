@@ -30,7 +30,7 @@ const CaraPembayaran = () => {
             showsVerticalScrollIndicator={false}
         >
             {/* Header */}
-            <Header title="Cara Pembayaran" color='black'/>
+            <Header title="Cara Pembayaran" color='black' className='gap-3' />
 
             <View className='btn-col items-start justify-start px-4 pb-4 elevation-md'>
                 <Text className='text-black text-lg font-bold text-center mt-4'>
