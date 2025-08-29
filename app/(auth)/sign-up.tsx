@@ -7,45 +7,55 @@ import { Alert, Text, View } from "react-native";
 
 const SignUp = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [form, setForm] = useState<SignUpForm>({ 
-    name: "", 
-    email: "", 
-    nim: "", 
-    password: "" 
+  const [form, setForm] = useState<SignUpForm>({
+    name: "",
+    email: "",
+    nim: "",
+    password: "",
   });
   const router = useRouter();
 
   const submit = async () => {
     const { name, email, nim, password } = form;
-    
-    if(!name || !email || !nim || !password) {
-      return Alert.alert('Error', 'Please fill in all fields.');
+
+    if (!name || !email || !nim || !password) {
+      return Alert.alert("Error", "Please fill in all fields.");
     }
 
     if (nim.length < 8) {
-      return Alert.alert('Error', 'NIM must be at least 8 characters long.');
+      return Alert.alert("Error", "NIM must be at least 8 characters long.");
     }
 
     if (password.length < 6) {
-      return Alert.alert('Error', 'Password must be at least 6 characters long.');
+      return Alert.alert("Error", "Password must be at least 6 characters long.");
     }
 
     setIsSubmitting(true);
 
     try {
-      // sign up logic here 
+      // Kirim data pakai FormData agar bisa diterima $_POST
+      const formData = new FormData();
+      formData.append("fullName", form.name); // harus sama dengan register.php
+      formData.append("email", form.email);
+      formData.append("nim", form.nim);
+      formData.append("password", form.password);
 
-      console.log('Sign up data:', form);
-      
-      Alert.alert(
-        'Success', 
-        'Registration successful! You can now sign in with your NIM and password.',
-        [
-          { text: 'OK', onPress: () => router.replace('/sign-in') }
-        ]
-      );
+      const response = await fetch("http://192.168.100.214/register.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (result.status === "success") {
+        Alert.alert("Success", result.message || "Registration successful!", [
+          { text: "OK", onPress: () => router.replace("/sign-in") },
+        ]);
+      } else {
+        Alert.alert("Error", result.message || "Registration failed.");
+      }
     } catch (error: any) {
-      Alert.alert('Error', error.message || 'Registration failed. Please try again.');
+      Alert.alert("Error", error.message || "Registration failed. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -54,23 +64,20 @@ const SignUp = () => {
   return (
     <View className="gap-6 bg-bgColor rounded-xl p-6">
       <View className="gap-4">
-        {/* <Text className="text-2xl font-bold text-center text-dark-100 mb-2">
-          Create Account
-        </Text> */}
         <Text className="text-gray-100 text-center mb-4">
-          Enter your details to register as a student
+          Masukkan detail Anda untuk mendaftar sebagai mahasiswa
         </Text>
 
         <CustomInput
           label="Full Name"
-          placeholder="Enter your full name"
+          placeholder="Masukkan Nama"
           value={form.name}
           onChangeText={(text) => setForm({ ...form, name: text })}
         />
 
         <CustomInput
           label="Email Address"
-          placeholder="Enter your email"
+          placeholder="Masukkan Email"
           value={form.email}
           onChangeText={(text) => setForm({ ...form, email: text })}
           keyboardType="email-address"
@@ -78,7 +85,7 @@ const SignUp = () => {
 
         <CustomInput
           label="Student ID (NIM)"
-          placeholder="Enter your NIM"
+          placeholder="Masukkan NIM"
           value={form.nim}
           onChangeText={(text) => setForm({ ...form, nim: text })}
           keyboardType="default"
@@ -86,7 +93,7 @@ const SignUp = () => {
 
         <CustomInput
           label="Password"
-          placeholder="Create a password"
+          placeholder="Masukkan Password"
           value={form.password}
           onChangeText={(text) => setForm({ ...form, password: text })}
           secureTextEntry

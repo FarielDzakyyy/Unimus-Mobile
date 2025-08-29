@@ -126,7 +126,7 @@ const TabLayout = () => {
                   color={focused ? Colors.primary : Colors.gray}
                 />
               }
-              focused={focused}
+              focused={focused} 
             />
           ),
         }}

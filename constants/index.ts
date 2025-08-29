@@ -10,6 +10,7 @@ import loginGraphic from "@/assets/images/login-graphic.png";
 import logoWhite from "@/assets/images/logo-unimus-white.png";
 import logo from "@/assets/images/logo-unimus.png";
 import personCircleOutline from "@/assets/images/personCircleOutline.jpg";
+import Fariel from "@/assets/images/Fariel.jpg";
 import success from "@/assets/images/success.png";
 
 import sks from "@/assets/icons/numsks.png";
@@ -77,5 +78,6 @@ export const images = {
     sks,
     studytime,
     academic,
+    Fariel,
     avatar
 }

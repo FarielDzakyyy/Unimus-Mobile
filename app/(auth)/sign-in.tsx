@@ -43,12 +43,12 @@ const SignIn = () => {
           Welcome Back
         </Text> */}
         <Text className="text-gray-100 text-center mb-4">
-          Sign in with your student credentials
+          Masuk dengan kredensial mahasiswa Anda
         </Text>
 
         <CustomInput
-          label="Student ID (NIM)"
-          placeholder="Enter your NIM"
+          label="NIM"
+          placeholder="Masukkan NIM"
           value={form.nim}
           onChangeText={(text) => setForm({ ...form, nim: text })}
           keyboardType="default"
@@ -56,7 +56,7 @@ const SignIn = () => {
 
         <CustomInput
           label="Password"
-          placeholder="Enter your password"
+          placeholder="Masukkan Password"
           value={form.password}
           onChangeText={(text) => setForm({ ...form, password: text })}
           secureTextEntry
