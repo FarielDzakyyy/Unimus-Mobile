@@ -7,30 +7,46 @@ import { Alert, Text, View } from "react-native";
 
 const SignIn = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [form, setForm] = useState<SignInForm>({ 
-    nim: "", 
-    password: "" 
+  const [form, setForm] = useState<SignInForm>({
+    nim: "",
+    password: "",
   });
   const router = useRouter();
 
   const submit = async () => {
     const { nim, password } = form;
-    
-    if(!nim || !password) {
-      return Alert.alert('Error', 'Please enter your NIM and password.');
+
+    if (!nim || !password) {
+      return Alert.alert("Error", "Please enter your NIM and password.");
     }
 
     setIsSubmitting(true);
 
     try {
-      // Implement authentication logic here
-      console.log('Sign in data:', form);
-      
-      // validation against user database here
-      
-      router.replace('/Index')
+      const response = await fetch("http://192.168.100.107/login.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `nim=${encodeURIComponent(nim)}&password=${encodeURIComponent(password)}`
+      });
+
+      const result = await response.json();
+      console.log("Login response:", result);
+
+      if (result.status === "success") {
+        Alert.alert("Success", result.message);
+
+        // arahkan sesuai "redirect" dari backend
+        if (result.redirect === "loginberhasil.html") {
+          router.replace("/Index"); // ke halaman utama app
+        } else {
+          router.replace("/Index");
+        }
+      } else {
+        Alert.alert("Error", result.message);
+      }
+
     } catch (error: any) {
-      Alert.alert('Error', error.message || 'Login failed. Please check your credentials and try again.');
+      Alert.alert("Error", error.message || "Login failed. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -39,9 +55,6 @@ const SignIn = () => {
   return (
     <View className="gap-6 bg-bgColor rounded-xl p-6">
       <View className="gap-4">
-        {/* <Text className="text-2xl font-bold text-center text-dark-100 mb-2">
-          Welcome Back
-        </Text> */}
         <Text className="text-gray-100 text-center mb-4">
           Masuk dengan kredensial mahasiswa Anda
         </Text>
@@ -51,7 +64,6 @@ const SignIn = () => {
           placeholder="Masukkan NIM"
           value={form.nim}
           onChangeText={(text) => setForm({ ...form, nim: text })}
-          keyboardType="default"
         />
 
         <CustomInput
